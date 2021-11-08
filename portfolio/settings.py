@@ -25,9 +25,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-!i7$$s(&0(tmvs4mleq@ub!m%4-s5lsf!vloa9(w+fm!+*pc*a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jaber-portfolio.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -130,6 +130,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media/')
 STATICFILES_DIRS = [
     STATIC_DIR, 
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/files')
 MEDIA_ROOT = MEDIA_DIR
 
 # Default primary key field type
