@@ -34,5 +34,7 @@ And navigate to `http://127.0.0.1:8000/`.
 
 
 ## Walkthrough
-
+### Admin Panel
+## ![Admin Panel Picture](admin-panel.png)
+### Entire Page View
 # ![Personal Portfolio App](portfolio-full-page.png)
