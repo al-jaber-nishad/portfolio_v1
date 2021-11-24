@@ -9,7 +9,7 @@ class Title(models.Model):
   updated = models.DateTimeField(auto_now=True)
 
   def __str__(self):
-    return self.titleDescription[:10]
+    return self.titleDescription[:50]
 
 
 
@@ -19,12 +19,12 @@ class About(models.Model):
   """Model definition for about."""
 
   profilePicture = models.ImageField(upload_to='uploaded/')
-  aboutDescription = models.CharField(max_length=250)
+  aboutDescription = models.TextField(blank=False)
   resume = models.FileField(upload_to='uploaded/')
   updated = models.DateTimeField(auto_now=True)
 
   def __str__(self):
-    return self.aboutDescription
+    return f'About Section {self.id}th edition'
 
 
 
@@ -52,10 +52,11 @@ class Skills(models.Model):
 class Projects(models.Model):
   projectTitle = models.CharField(max_length=250)
   projectDes = models.TextField(blank=False)
-  tools = models.CharField(max_length=30)
+  tools = models.CharField(max_length=256)
   gitLink = models.URLField(max_length=200, blank=True)
-  liveLink = models.URLField(max_length=200)
+  liveLink = models.URLField(max_length=200, blank=True)
   projectImage = models.ImageField(upload_to='uploaded/')
+  time = models.DateTimeField(auto_now_add=True)
 
   def splitTools(self):
     return self.tools.split(",")
@@ -75,4 +76,4 @@ class Social(models.Model):
 
 
   def __str__(self):
-    return f'Social Account (self.id)'
+    return f'Social Account. {self.id}th edition'

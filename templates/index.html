@@ -48,7 +48,7 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Resume</a>
+            <a class="nav-link" href="{{ about.resume.url }}">Resume</a>
           </li>
         </ul>
       </div>
@@ -123,8 +123,8 @@
         
           <div class="row">
             <div class="col-md-6 col-sm-12">
-              <div class="project-image">
-                <img class="img-fluid" src="{{ project.projectImage.url }}" alt="" />
+              <div class="project-image pt-3">
+                <img class="img-fluid border border-light" src="{{ project.projectImage.url }}" alt="" />
               </div>
             </div>
             <div class="col-md-6 col-sm-12">
@@ -140,12 +140,16 @@
                    
                 </div>
                 <div class="project-link">
+                  {% if project.gitLink %}
                   <a data-toggle="tooltip" title="Github Link" href="{{ project.gitLink }}">
                     <i class="fab fa-github"></i>
                   </a>
+                  {% endif %}
+                  {% if project.liveLink %}
                   <a data-toggle="tooltip" title="Live Link" href="{{ project.liveLink }}">
                     <i class="fas fa-external-link-alt"></i>
                   </a>
+                  {% endif %}
                 </div>
               </div>
             </div>
@@ -165,7 +169,9 @@
           say hi, I’ll try my best to get back to you!
         </div>
         <div class="contact-btn">
-          <button class="btn button">Say Hello</button>
+          <a href="mailto:{{ social.mail }}">
+            <button class="btn button">Say Hello</button>
+          </a>
         </div>
       </div>
   </section>
@@ -179,8 +185,8 @@
         <a data-toggle="tooltip" title="Github" href="{{ social.git }}">
           <i class="fab fa-github"></i>
         </a>
-        <a data-toggle="tooltip" title="Dev.To" href="{{ social.devTO }}">
-          <i class="fab fa-dev"></i>
+        <a data-toggle="tooltip" title="Dev.To" href="{{ social.leetCode }}">
+          <i class="fas fa-laptop-code"></i>
         </a>
         <a data-toggle="tooltip" title="LinkedIn" href="{{ social.linkedIN }}">
           <i class="fab fa-linkedin"></i>
@@ -195,33 +201,6 @@
 
 
   </div>
-  <!-- Fixed Sidebar -->
-  <!-- <div class="left-bar">
-    <ul>
-      <li>
-        <a href="">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="fab fa-github"></i>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="fab fa-dev"></i>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </li>
-    </ul>
-    
-  </div> -->
-
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

@@ -183,7 +183,7 @@ section{
   text-decoration: none;
   color: #49e090;
 }
-.fa-github:hover, .fa-external-link-alt:hover, .fa-envelope:hover, .fa-dev:hover, .fa-linkedin:hover{
+.fa-github:hover, .fa-external-link-alt:hover, .fa-envelope:hover, .fa-dev:hover, .fa-linkedin:hover, .fa-laptop-code:hover {
   color: #49e090;
   text-decoration: none;
 }

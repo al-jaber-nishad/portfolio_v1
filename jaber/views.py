@@ -9,7 +9,7 @@ def index(request):
   about = About.objects.latest('updated')
   category = Category.objects.all()
   skills = Skills.objects.all()
-  projects = Projects.objects.all()
+  projects = Projects.objects.all().order_by('-time')
   social = Social.objects.latest('updated')
   
   context = {
