@@ -1,4 +1,4 @@
-# Django Web Scrapper
+# Django Based Personal Portfolio 
 
 ## Setup
 
